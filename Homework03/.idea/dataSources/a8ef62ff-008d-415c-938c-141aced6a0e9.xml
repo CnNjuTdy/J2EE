@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - j2ee_student@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="j2ee_student">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="cms"/>
+    <schema id="3" name="information_schema"/>
+    <schema id="4" name="knowledge"/>
+    <schema id="5" name="lab2"/>
+    <schema id="6" name="mysql"/>
+    <schema id="7" name="performance_schema"/>
+    <schema id="8" name="phpmyadmin"/>
+    <schema id="9" name="railway"/>
+    <schema id="10" name="test"/>
+    <schema id="11" name="web_lab"/>
+    <table id="12" parent="1" name="exam"/>
+    <table id="13" parent="1" name="examresult"/>
+    <table id="14" parent="1" name="user"/>
+    <column id="15" parent="12" name="examName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="16" parent="13" name="examName">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="17" parent="13" name="username">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="18" parent="13" name="examMark">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="19" parent="13" name="q1Mark">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="20" parent="13" name="q2Mark">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="21" parent="13" name="q3Mark">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="22" parent="13" name="PRIMARY">
+      <columns>examName
+username</columns>
+      <primary>1</primary>
+    </key>
+    <column id="23" parent="14" name="username">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="24" parent="14" name="password">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="25" parent="14" name="PRIMARY">
+      <columns>username</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

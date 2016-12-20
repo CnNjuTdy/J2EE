@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -24,7 +25,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/user.login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	DBHelper dbHelper = null;
+	private DBHelper dbHelper = null;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -33,11 +34,11 @@ public class LoginServlet extends HttpServlet {
         super();
     }
     public void init(){
-		dbHelper = DBHelper.getInstance()
+		dbHelper = DBHelper.getInstance();
 	}
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response);
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/user/login.html");
@@ -53,23 +54,41 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
-		String state = varifyUser(username,password);
-
-		HttpSession session = req.getSession(false);
+		String state = verifyUser(username,password);
+        if(state.equals("loginRight")){
+            HttpSession session = req.getSession(false);
+			if(session!=null) {
+				session.setAttribute("loginUser", username);
+			}
+			else{
+				session = req.getSession(true);
+				session.setAttribute("loginUser", username);
+			}
+			req.setAttribute("loginUser", username);
+        }
 		PrintWriter pw = resp.getWriter();
 		pw.write(state);
 	}
-	private String varifyUser(String username,String password){
+	private String verifyUser(String username,String password){
 		Connection connection = null;
 		PreparedStatement stmt = null;
-		ResultSet result = null;
-		ArrayList list = new ArrayList();
+		ResultSet rs = null;
 		try {
-			connection = datasource.getConnection();
+			connection = dbHelper.getConnection();
+			stmt = connection.prepareStatement("select COUNT(*) as count from user where username = ? and password = ?");
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+            rs = stmt.executeQuery();
+            rs.next();
+			if(rs.getInt("count")==0){
+                return "loginError";
+            }
+			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return "normal";
+		return "loginRight";
 	}
+
 
 }

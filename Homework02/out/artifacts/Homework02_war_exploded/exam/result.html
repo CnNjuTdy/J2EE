@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>WeSporter</title>
-    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+    <title>Exam</title>
+    <!--<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">-->
     <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">	
     <link href="http://cdn.bootcss.com/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet">
 </head>
@@ -11,12 +11,13 @@
 <div class="container">
     <div class="row"  style="margin-top: 30px">
         <div class="col-md-12">
-            <p>学生姓名：<strong id="username">张三</strong></p>
+            <p>学生姓名：<strong id="username"></strong></p>
+            <p class="text-danger"><strong id="danger"></strong></p>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-success">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-success" id="resultTable">
                 <div class="panel-heading text-center">
                     测验情况
                 </div>
@@ -24,13 +25,13 @@
                     <thead>
                     <tr>
                         <th>课程名称</th>
-                        <th>测验情况</th>
+                        <th>测验总分</th>
+                        <th>选择得分</th>
+                        <th>填空得分</th>
+                        <th>问答得分</th>
                     </tr>
                     </thead>
-                    <tbody>
-
-                    <tr>
-                    </tr>
+                    <tbody id="result">
                     </tbody>
                 </table>
             </div>
