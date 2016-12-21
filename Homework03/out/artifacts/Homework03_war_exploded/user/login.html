@@ -17,17 +17,17 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-success">
                 <div class="panel-heading text-center">
-                    <strong>登录</strong>
+                    <strong>学生测验情况查询系统登录</strong>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group col-md-12">
-                                <input id ="username" type="text" value="" placeholder="昵称"
+                                <input id="username" type="text" value="" placeholder="昵称"
                                        class="form-control">
                             </div>
                             <div class="form-group col-md-12">
-                                <input id = "password" type="password" value="" placeholder="密码"
+                                <input id="password" type="password" value="" placeholder="密码"
                                        class="form-control">
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                             <button type="button" class="btn btn-block btn-primary" onclick="doLogin()">确认登录</button>
                         </div>
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-block btn-primary" onclick="">申请账号</button>
+                            <button type="button" class="btn btn-block btn-primary" onclick="doVisitIn()">游客模式</button>
                         </div>
                     </div>
                 </div>
@@ -45,10 +45,9 @@
         </div>
     </div>
 </div>
-</div>
 
 <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/flat-ui/2.3.0/js/vendor/video.js"></script>
-<script src="../js/userLogin.js"></script>
+<script src="../js/util.js"></script>
 </body>
 </html>

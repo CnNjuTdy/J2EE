@@ -12,6 +12,8 @@ var getResult = (function () {
         dataType:"json",
         success: function (data) {
             $("#username").html(data.username);
+            $("#online").html(data.online);
+            $("#offline").html(data.offline);
             if(data.examState=="abnormal"){
                 $("#danger").html("您有课程未参加测验或测验结果不及格！");
                 $("#resultTable").removeClass("panel-success");

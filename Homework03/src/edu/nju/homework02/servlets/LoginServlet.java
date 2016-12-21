@@ -42,6 +42,12 @@ public class LoginServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response);
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if(request.getSession()!=null){
+            if(request.getSession().getAttribute("loginUser")!=null){
+                response.sendRedirect("exam.result");
+                return;
+            }
+        }
         RequestDispatcher dispatcher = request.getRequestDispatcher("/user/login.html");
         if (dispatcher != null) {
             dispatcher.include(request, response);
@@ -53,7 +59,7 @@ public class LoginServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String actionType = req.getParameter("type");
-        if (actionType.equals("login")) {
+        if(actionType.equals("login")) {
             String username = req.getParameter("username");
             String password = req.getParameter("password");
             String state = verifyUser(username, password);
@@ -66,6 +72,12 @@ public class LoginServlet extends HttpServlet {
         }else if(actionType.equals("logout")){
             HttpSession session = req.getSession();
             session.removeAttribute("loginUser");
+        }else if(actionType.equals("visitIn")) {
+            HttpSession session = req.getSession();
+            session.setAttribute("visitUser", session.getId());
+        }else if(actionType.equals("visitOut")){
+            HttpSession session = req.getSession();
+            session.removeAttribute("visitUser");
         }
     }
 

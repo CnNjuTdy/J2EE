@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>Exam</title>
     <!--<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">-->
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">	
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://cdn.bootcss.com/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet">
 </head>
-<body>
+<body onbeforeunload="logExit()">
 <div class="container">
-    <div class="row"  style="margin-top: 30px">
+    <div class="row" style="margin-top: 30px">
         <div class="col-md-12">
             <p>学生姓名：<strong id="username"></strong></p>
             <p class="text-danger"><strong id="danger"></strong></p>
@@ -37,9 +37,23 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <button type="button" class="btn btn-info btn-lg btn-block" onclick="doLogout()">退出登录</button>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+        <div class="col-md-6 text-center">
+            在线人数：<strong id="online"></strong>
+        </div>
+        <div class="col-md-6 text-center">
+            游客人数：<strong id="offline"></strong>
+        </div>
+    </div>
 </div>
 <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/flat-ui/2.3.0/js/vendor/video.js"></script>
+<script src="../js/util.js"></script>
 <script src="../js/examResult.js"></script>
 </body>
 </html>

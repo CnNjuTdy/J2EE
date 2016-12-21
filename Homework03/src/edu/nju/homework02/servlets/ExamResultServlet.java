@@ -48,11 +48,11 @@ public class ExamResultServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
         if (session == null) {
-            resp.sendRedirect("user.login");
+            resp.sendRedirect("user.log");
         } else {
             String username = (String) session.getAttribute("loginUser");
             if (username == null) {
-                resp.sendRedirect("user.login");
+                resp.sendRedirect("user.log");
             }else{
                 RequestDispatcher dispatcher = req.getRequestDispatcher("/exam/result.html");
                 if (dispatcher != null) {
@@ -99,6 +99,8 @@ public class ExamResultServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        params.put("online", getServletContext().getAttribute("online"));
+        params.put("offline", getServletContext().getAttribute("offline"));
         params.put("username",username);
         params.put("examState", state);
         params.put("examResult", JSONArray.fromObject(list));

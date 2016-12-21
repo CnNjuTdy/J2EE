@@ -41,7 +41,7 @@ public class OnlineListener implements ServletContextListener,
         int offline = (Integer) this.application.getAttribute("offline");
         if ("loginUser".equals(arg0.getName())) {
             online++;
-        }else if("visitName".equals(arg0.getName())){
+        }else if("visitUser".equals(arg0.getName())){
             offline++;
         }
         //将添加后的列表重新设置到application属性中
@@ -55,7 +55,7 @@ public class OnlineListener implements ServletContextListener,
         int offline = (Integer) this.application.getAttribute("offline");
         if ("loginUser".equals(arg0.getName())) {
             online--;
-        }else if("visitName".equals(arg0.getName())){
+        }else if("visitUser".equals(arg0.getName())){
             offline--;
         }
         //将添加后的列表重新设置到application属性中
