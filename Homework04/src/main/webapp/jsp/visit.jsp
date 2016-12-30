@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Visit</title>
     <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
 
@@ -17,6 +17,9 @@
 
     <!-- Loading Flat UI -->
     <link href="//cdn.bootcss.com/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet">
+    <jsp:useBean id="onlineNumber"
+                 type="action.bussiness.OnlineBean"
+                 scope="session"></jsp:useBean>
 </head>
 <body>
 <div class="container" >
@@ -31,17 +34,23 @@
     </div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <p>游客sessionID:<strong id="id"></strong></p>
+            <%
+                String sessionID = "";
+                if(request.getSession(false)!=null){
+                    sessionID = (String)request.getSession(false).getId();
+                }
+            %>
+            <p>游客sessionID:<strong><%=sessionID%></strong></p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <p>在线人数：<strong id="online"></strong></p>
+            <p>在线人数：<strong><%=onlineNumber.getLoginNumber()%></strong></p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <p>游客人数：<strong id="offline"></strong></p>
+            <p>游客人数：<strong><%=onlineNumber.getVisitNumber()%></strong></p>
         </div>
     </div>
     <div class="row">

@@ -2,13 +2,16 @@ package action.bussiness;
 
 import model.entity.Exam;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Tondiyee on 2016/12/28.
  */
 
-public class ExamListBean {
+public class ExamListBean implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private List examList;
     private String state;
 

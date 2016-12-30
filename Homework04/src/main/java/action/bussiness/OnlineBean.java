@@ -1,9 +1,13 @@
 package action.bussiness;
 
+import java.io.Serializable;
+
 /**
  * Created by Tondiyee on 2016/12/29.
  */
-public class OnlineBean {
+public class OnlineBean implements Serializable{
+    private static final long serialVersionUID = 1L;
+
     private int loginNumber;
     private int visitNumber;
 
