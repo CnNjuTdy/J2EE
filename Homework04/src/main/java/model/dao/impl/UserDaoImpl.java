@@ -38,13 +38,12 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public boolean verify(String username, String password) {
-//        String sql = "select count(*) as count from user where username = ? and password = ?";
-        String sql = "select count(*) as count from user where username = \""+username+"\" and password = \""+password+"\"";
-//        ArrayList params = new ArrayList();
-//        params.add(username);
-//        params.add(password);
-        System.out.println(sql);
-        ResultSet rs = helper.find(sql);
+        String sql = "select count(*) as count from user where username = ? and password = ?";
+//        String sql = "select count(*) as count from user where username = \""+username+"\" and password = \""+password+"\"";
+        ArrayList params = new ArrayList();
+        params.add(username);
+        params.add(password);
+        ResultSet rs = helper.find(sql,params);
         boolean login = false;
         try {
             rs.next();
