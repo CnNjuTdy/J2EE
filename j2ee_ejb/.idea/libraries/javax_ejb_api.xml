@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="javax.ejb-api">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/EJBTestJava/lib/javax.ejb-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EJBTestJava/lib/jboss-client.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
