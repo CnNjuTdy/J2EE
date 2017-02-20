@@ -1,0 +1,16 @@
+<hibernate-mapping package="com.hotelworld.entity">
+<class name="Member" table="member">
+    <id name="id" column="m_id"/>
+    <property name="name" column="m_name"/>
+    <property name="phone" column="m_phone"/>
+    <property name="balance" column="m_balance"/>
+    <property name="credits" column="m_credits"/>
+    <property name="account" column="m_account"/>
+    <property name="state" column="m_state">
+        <type name="org.hibernate.type.EnumType">
+            <param name="enumClass">com.hotelworld.entity.state.MemberState</param>
+            <param name="type">4</param>
+        </type>
+    </property>
+</class>
+</hibernate-mapping>
