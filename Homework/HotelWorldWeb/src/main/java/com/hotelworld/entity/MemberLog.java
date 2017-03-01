@@ -15,6 +15,16 @@ public class MemberLog {
     private Date date;
     private int reason;
 
+
+    public MemberLog(){}
+    public MemberLog(String memberId, MemberOperateType type, int money, Date date, int reason) {
+        this.memberId = memberId;
+        this.type = type;
+        this.money = money;
+        this.date = date;
+        this.reason = reason;
+    }
+
     public String getId() {
         return id;
     }

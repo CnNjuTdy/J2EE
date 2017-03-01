@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="hibernate-core-4.1.12.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/EJBTest/lib/hibernate-core-4.1.12.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EJBTest/lib/hibernate-commons-annotations-4.0.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EJBTest/lib/hibernate-ehcache-4.1.12.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EJBTest/lib/hibernate-entitymanager-4.1.12.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EJBTest/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EJBTest/lib/hibernate-search-engine-4.2.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EJBTest/lib/hibernate-search-orm-4.2.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/EJBTest/lib/hibernate-validator-5.0.1.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

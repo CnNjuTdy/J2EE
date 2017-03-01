@@ -1,0 +1,12 @@
+<hibernate-mapping package="com.hotelworld.entity">
+    <class name="Hotel" table="hotel">
+        <id name="id" column="h_id"/>
+        <property name="boss" column="h_boss"/>
+        <property name="city" column="h_city"/>
+        <property name="address" column="h_address"/>
+        <property name="maxSingle" column="h_max_single"/>
+        <property name="maxStandard" column="h_max_standard"/>
+        <property name="maxDouble" column="h_max_double"/>
+        <property name="maxSuit" column="h_max_suit"/>
+    </class>
+</hibernate-mapping>

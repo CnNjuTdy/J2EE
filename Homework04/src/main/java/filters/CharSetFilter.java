@@ -13,6 +13,7 @@ import java.io.IOException;
 @WebFilter("/*")
 public class CharSetFilter implements Filter {
     String encoding = null;
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         this.encoding = "UTF-8";

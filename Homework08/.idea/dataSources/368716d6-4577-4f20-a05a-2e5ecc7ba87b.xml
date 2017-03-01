@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hibernate.cfg.xml/Hibernate">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="j2ee_student">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="hotel_world"/>
+    <schema id="3" name="information_schema"/>
+    <schema id="4" name="mysql"/>
+    <schema id="5" name="performance_schema"/>
+    <schema id="6" name="phpmyadmin"/>
+    <schema id="7" name="spring_1"/>
+    <schema id="8" name="test"/>
+    <table id="9" parent="1" name="exam"/>
+    <table id="10" parent="1" name="examresult"/>
+    <table id="11" parent="1" name="user"/>
+    <column id="12" parent="9" name="examName">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="13" parent="9" name="PRIMARY">
+      <columns>examName</columns>
+      <primary>1</primary>
+    </key>
+    <column id="14" parent="10" name="username">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="15" parent="10" name="examName">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="16" parent="10" name="examMark">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="17" parent="10" name="q1Mark">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="18" parent="10" name="q2Mark">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="19" parent="10" name="q3Mark">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="20" parent="10" name="PRIMARY">
+      <columns>username
+examName</columns>
+      <primary>1</primary>
+    </key>
+    <column id="21" parent="11" name="username">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="22" parent="11" name="password">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="23" parent="11" name="PRIMARY">
+      <columns>username</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

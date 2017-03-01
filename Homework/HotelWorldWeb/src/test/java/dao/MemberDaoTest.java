@@ -46,7 +46,6 @@ public class MemberDaoTest {
         if(member==null){
             return ;
         }
-        System.out.println(member);
         member.setState(MemberState.CLOSED);
     }
 

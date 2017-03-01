@@ -1,0 +1,6 @@
+<hibernate-mapping package="model.entity">
+    <class name="User" table="user">
+        <id name="username" column="username"/>
+        <property name="password" column="password"/>
+    </class>
+</hibernate-mapping>

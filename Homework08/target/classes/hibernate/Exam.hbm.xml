@@ -1,0 +1,9 @@
+<hibernate-mapping package="model.entity">
+    <class name="Exam" table="examresult">
+        <id name="examName" column="examName"/>
+        <property name="examMark" column="examMark"/>
+        <property name="q1Mark" column="q1Mark"/>
+        <property name="q2Mark" column="q2Mark"/>
+        <property name="q3Mark" column="q3Mark"/>
+    </class>
+</hibernate-mapping>

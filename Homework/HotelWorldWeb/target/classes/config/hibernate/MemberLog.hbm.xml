@@ -1,0 +1,10 @@
+<hibernate-mapping package="com.hotelworld.entity">
+    <class name="MemberLog" table="member_log">
+        <id name="id" column="ml_id"/>
+        <property name="memberId" column="ml_member"/>
+        <property name="type" column="ml_operate_type"/>
+        <property name="money" column="ml_money"/>
+        <property name="date" column="ml_date"/>
+        <property name="reason" column="ml_reason"/>
+    </class>
+</hibernate-mapping>
