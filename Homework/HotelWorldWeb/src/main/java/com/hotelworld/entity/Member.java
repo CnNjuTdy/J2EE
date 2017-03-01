@@ -1,6 +1,7 @@
 package com.hotelworld.entity;
 
 import com.hotelworld.entity.state.MemberState;
+import com.hotelworld.entity.state.MemberType;
 
 
 /**
@@ -14,6 +15,7 @@ public class Member {
     private int credits;
     private String account;
     private MemberState state;
+    private MemberType type;
 
     public MemberState getState() {
         return state;
@@ -72,6 +74,13 @@ public class Member {
         this.account = account;
     }
 
+    public MemberType getType() {
+        return type;
+    }
+
+    public void setType(MemberType type) {
+        this.type = type;
+    }
 
     @Override
     public String toString() {
@@ -83,6 +92,7 @@ public class Member {
                 ", credits=" + credits +
                 ", account='" + account + '\'' +
                 ", state=" + state +
+                ", type=" + type +
                 '}';
     }
 }

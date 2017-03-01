@@ -12,5 +12,11 @@
             <param name="type">4</param>
         </type>
     </property>
+    <property name="type" column="m_type">
+        <type name="org.hibernate.type.EnumType">
+            <param name="enumClass">com.hotelworld.entity.state.MemberType</param>
+            <param name="type">3</param>
+        </type>
+    </property>
 </class>
 </hibernate-mapping>

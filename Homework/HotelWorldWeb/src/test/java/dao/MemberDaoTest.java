@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by Tondiyee on 2017/2/1.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:config/spring/spring-*.xml"})
+@ContextConfiguration(locations = {"classpath*:config/spring/spring-core.xml","classpath*:config/spring/spring-hibernate.xml"})
 public class MemberDaoTest {
     @Autowired
     private MemberDao dao;
