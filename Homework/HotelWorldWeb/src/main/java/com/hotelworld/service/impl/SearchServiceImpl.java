@@ -119,6 +119,7 @@ public class SearchServiceImpl implements SearchService {
         List<Hotel> hotels = hotelDao.findAllHotel();
         //人数变化不知道怎么从数据库里获得……
         int[] memberNumbers = {1,2};
+        shi a
         return null;
     }
 
