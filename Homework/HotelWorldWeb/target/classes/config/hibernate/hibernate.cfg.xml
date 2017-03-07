@@ -11,5 +11,9 @@
         <mapping resource="config/hibernate/Schedule.hbm.xml"/>
         <mapping resource="config/hibernate/Order.hbm.xml"/>
         <mapping resource="config/hibernate/MemberLog.hbm.xml"/>
+        <mapping resource="config/hibernate/Application.hbm.xml"/>
+        <mapping resource="config/hibernate/CheckIn.hbm.xml"/>
+        <mapping resource="config/hibernate/CheckOut.hbm.xml"/>
+        <mapping resource="config/hibernate/Room.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

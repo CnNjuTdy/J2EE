@@ -19,4 +19,8 @@ public class IdUtil {
     public static String getOrderId(){
         return null;
     }
+    public static String getApplicationId(){return null;}
+    public static String getCheckInLogId(){return null;}
+    public static String getCheckOutLogId(){return null;}
+
 }

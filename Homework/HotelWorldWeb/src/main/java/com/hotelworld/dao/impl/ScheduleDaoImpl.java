@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
+import java.util.List;
+
 /**
  * Created by Tondiyee on 2017/2/3.
  */
@@ -27,5 +30,13 @@ public class ScheduleDaoImpl implements ScheduleDao {
 
     public Schedule findScheduleById(String id) {
         return template.get(Schedule.class,id);
+    }
+
+    public Schedule findScheduleByDateAndHotel(String hotelId, Date date) {
+        return null;
+    }
+
+    public List<Schedule> findScheduleByHotel(String hotelId) {
+        return null;
     }
 }

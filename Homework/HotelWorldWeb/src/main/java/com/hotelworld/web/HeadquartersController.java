@@ -21,4 +21,9 @@ public class HeadquartersController {
     public ModelAndView checkAll(){
         return null;
     }
+
+    @RequestMapping(value = "/settle",method = RequestMethod.POST)
+    public ModelAndView settleOrder(){
+        return null;
+    }
 }

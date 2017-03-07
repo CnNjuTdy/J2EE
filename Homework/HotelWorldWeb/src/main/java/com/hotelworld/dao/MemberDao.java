@@ -2,6 +2,8 @@ package com.hotelworld.dao;
 
 import com.hotelworld.entity.Member;
 
+import java.util.List;
+
 /**
  * Created by Tondiyee on 2017/2/1.
  */
@@ -35,4 +37,5 @@ public interface MemberDao {
      * @param member
      */
     public void delMember(Member member);
+
 }

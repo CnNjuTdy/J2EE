@@ -1,6 +1,7 @@
 <hibernate-mapping package="com.hotelworld.entity">
 <class name="Member" table="member">
     <id name="id" column="m_id"/>
+    <property name="password" column="m_password"/>
     <property name="name" column="m_name"/>
     <property name="phone" column="m_phone"/>
     <property name="balance" column="m_balance"/>
@@ -10,12 +11,6 @@
         <type name="org.hibernate.type.EnumType">
             <param name="enumClass">com.hotelworld.entity.state.MemberState</param>
             <param name="type">4</param>
-        </type>
-    </property>
-    <property name="type" column="m_type">
-        <type name="org.hibernate.type.EnumType">
-            <param name="enumClass">com.hotelworld.entity.state.MemberType</param>
-            <param name="type">3</param>
         </type>
     </property>
 </class>

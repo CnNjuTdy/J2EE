@@ -10,12 +10,26 @@ import com.hotelworld.entity.state.MemberType;
 public class Member {
     private String id;
     private String name;
+    private String password;
     private String phone;
     private int balance;
     private int credits;
     private String account;
     private MemberState state;
-    private MemberType type;
+
+    public Member() {
+    }
+
+    public Member(String id, String name, String password, String phone, int balance, int credits, String account, MemberState state) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.phone = phone;
+        this.balance = balance;
+        this.credits = credits;
+        this.account = account;
+        this.state = state;
+    }
 
     public MemberState getState() {
         return state;
@@ -31,6 +45,14 @@ public class Member {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getName() {
@@ -58,6 +80,11 @@ public class Member {
     }
 
 
+    public void addBalance(int add){
+        this.balance = balance+add;
+    }
+
+
     public int getCredits() {
         return credits;
     }
@@ -66,6 +93,9 @@ public class Member {
         this.credits = credits;
     }
 
+    public void addCredits(int add){
+        this.credits = credits+add;
+    }
     public String getAccount() {
         return account;
     }
@@ -74,13 +104,6 @@ public class Member {
         this.account = account;
     }
 
-    public MemberType getType() {
-        return type;
-    }
-
-    public void setType(MemberType type) {
-        this.type = type;
-    }
 
     @Override
     public String toString() {
@@ -92,7 +115,6 @@ public class Member {
                 ", credits=" + credits +
                 ", account='" + account + '\'' +
                 ", state=" + state +
-                ", type=" + type +
                 '}';
     }
 }

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by Tondiyee on 2017/2/3.
  */
@@ -27,5 +29,9 @@ public class MemberLogDaoImpl implements MemberLogDao{
 
     public MemberLog findMemberLogById(String id) {
         return template.get(MemberLog.class,id);
+    }
+
+    public List<MemberLog> findMemberLogByMember(String memberId) {
+        return null;
     }
 }

@@ -17,7 +17,8 @@ public class MemberLog {
 
 
     public MemberLog(){}
-    public MemberLog(String memberId, MemberOperateType type, int money, Date date, int reason) {
+    public MemberLog(String id,String memberId, MemberOperateType type, int money, Date date, int reason) {
+        this.id = id;
         this.memberId = memberId;
         this.type = type;
         this.money = money;

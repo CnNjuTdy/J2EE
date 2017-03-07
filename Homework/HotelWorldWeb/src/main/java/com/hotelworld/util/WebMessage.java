@@ -1,16 +1,16 @@
 package com.hotelworld.util;
 
-import com.hotelworld.entity.state.WebMessageState;
+import com.hotelworld.entity.state.WebResultState;
 
 /**
  * Created by Tondiyee on 2017/2/27.
  */
 public class WebMessage {
     String message;
-    WebMessageState state;
+    WebResultState state;
 
 
-    public WebMessage(String message, WebMessageState state) {
+    public WebMessage(String message, WebResultState state) {
         this.message = message;
         this.state = state;
     }
@@ -23,11 +23,11 @@ public class WebMessage {
         this.message = message;
     }
 
-    public WebMessageState getState() {
+    public WebResultState getState() {
         return state;
     }
 
-    public void setState(WebMessageState state) {
+    public void setState(WebResultState state) {
         this.state = state;
     }
 

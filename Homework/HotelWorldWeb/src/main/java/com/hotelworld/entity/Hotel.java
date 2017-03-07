@@ -12,7 +12,23 @@ public class Hotel {
     private int maxStandard;
     private int maxDouble;
     private int maxSuit;
+    private int balance;
+    private int canFound;
 
+    public Hotel(){}
+
+    public Hotel(String id, String boss, String city, String address, int maxSingle, int maxStandard, int maxDouble, int maxSuit, int balance, int canFound) {
+        this.id = id;
+        this.boss = boss;
+        this.city = city;
+        this.address = address;
+        this.maxSingle = maxSingle;
+        this.maxStandard = maxStandard;
+        this.maxDouble = maxDouble;
+        this.maxSuit = maxSuit;
+        this.balance = balance;
+        this.canFound = canFound;
+    }
 
     public String getId() {
         return id;
@@ -78,6 +94,45 @@ public class Hotel {
         this.maxSuit = maxSuit;
     }
 
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public void addBalance(int add){
+        this.balance = balance+add;
+    }
+
+    public int getCanFound() {
+        return canFound;
+    }
+
+    public void setCanFound(int canFound) {
+        this.canFound = canFound;
+    }
+
+    public int getMaxRoom(int i){
+        switch (i){
+            case 1:return maxSingle;
+            case 2:return maxStandard;
+            case 3:return maxDouble;
+            case 4:return maxSuit;
+            default:return 0;
+        }
+    }
+
+    public void setMaxRoom(int i,int maxRoom){
+        switch (i){
+            case 1:maxSingle = maxRoom;break;
+            case 2:maxStandard = maxRoom;break;
+            case 3:maxDouble = maxRoom;break;
+            case 4:maxSuit = maxRoom;break;
+            default:break;
+        }
+    }
     @Override
     public String toString() {
         return "Hotel{" +

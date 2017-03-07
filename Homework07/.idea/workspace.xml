@@ -2,25 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0dbcd22-e2e3-4c94-8526-2a250c98bcfa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-commons-annotations-4.0.1.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-core-4.1.12.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-ehcache-4.1.12.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-entitymanager-4.1.12.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-search-4.2.0.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-search-analyzers-4.2.0.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-search-engine-4.2.0.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-search-orm-4.2.0.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/lib/hibernate-validator-5.0.1.Final.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/.idea/libraries/JPA_2_1_JPA_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../j2ee_jpa/.idea/libraries/hibernate_core_4_1_12_Final.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Homework04/.gitignore" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework04/src/main/java/filters/CharSetFilter.java" afterPath="$PROJECT_DIR$/../Homework04/src/main/java/filters/CharSetFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../j2ee_ejb/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../j2ee_ejb/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/../j2ee_jpa/EJBTest/src/META-INF/persistence.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/ApplicationDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/CheckInLogDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/CheckOutLogDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/RoomDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/impl/ApplicationDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/impl/CheckInLogDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/impl/CheckOutLogDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/impl/RoomDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/CheckInLog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/CheckOutLog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/Room.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/BranchManagerService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/HeadManagerService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/SearchService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/impl/BranchManagerServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/impl/HeadManagerServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/impl/ScheduleServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/impl/SearchServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/util/WebObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/CheckIn.hbm.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/CheckOut.hbm.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/Room.hbm.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/test/java/utilTest/DateUtilTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/test/java/test/MyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/entity/state/WebMessageState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/web/SearchController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/test-classes/test/MyTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Homework06.rar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/6f9ff66f-a929-4534-90fb-adc007405c37.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/f64efd38-a083-430a-97a5-598e194cffca.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/entity/Order.class" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/entity/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/entity/state/MemberOperateType.class" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/entity/state/MemberOperateType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/service/impl/MemberServiceImpl.class" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/service/impl/MemberServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/web/HeadquartersController.class" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/com/hotelworld/web/HeadquartersController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/doc/需求分析文档.docx" afterPath="$PROJECT_DIR$/../Homework/doc/需求分析文档.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/.idea/dataSources/423cdfb8-79a1-4d6d-8c24-4f2bab7fc6b9.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/.idea/dataSources/423cdfb8-79a1-4d6d-8c24-4f2bab7fc6b9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/.idea/dictionaries/Tondiyee.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/.idea/dictionaries/Tondiyee.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/HotelWorldWeb.iml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/HotelWorldWeb.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/OrderDao.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/OrderDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/ScheduleDao.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/ScheduleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/impl/OrderDaoImpl.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/impl/OrderDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/impl/ScheduleDaoImpl.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/dao/impl/ScheduleDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/Hotel.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/Hotel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/Member.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/Member.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/MemberLog.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/MemberLog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/Order.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/Schedule.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/Schedule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/state/MemberOperateType.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/state/MemberOperateType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/state/MemberState.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/state/MemberState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/state/OrderState.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/state/OrderState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/MemberService.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/MemberService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/OrderService.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/OrderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/impl/MemberServiceImpl.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/impl/MemberServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/impl/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/impl/OrderServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/util/DateUtil.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/util/DateUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/util/IdUtil.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/util/IdUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/util/WebMessage.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/util/WebMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/web/HeadquartersController.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/web/HeadquartersController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/Hotel.hbm.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/Hotel.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/Member.hbm.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/Member.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/Order.hbm.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/Order.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/Schedule.hbm.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/Schedule.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/resources/config/hibernate/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/config/hibernate/Order.hbm.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/config/hibernate/Order.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/config/hibernate/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/target/classes/config/hibernate/hibernate.cfg.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/state/WebMessageState.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/entity/state/WebResultState.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/HotelService.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/service/ScheduleService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/web/SearchController.java" afterPath="$PROJECT_DIR$/../Homework/HotelWorldWeb/src/main/java/com/hotelworld/web/StatisticController.java" />
     </list>
     <ignored path="Homework07.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,8 +134,8 @@
       <file leaf-file-name="ExamDaoImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/ExamDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="-5">
+              <caret line="32" column="48" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ExamDaoImpl#0;class#ExamDaoImpl#0" expanded="false" />
@@ -168,9 +220,10 @@
       <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="350">
               <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="35" selection-end-column="54" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="method#UserDaoImpl#0;class#UserDaoImpl#0" expanded="false" />
                 <element signature="method#getInstance#0;class#UserDaoImpl#0" expanded="false" />
               </folding>
@@ -187,6 +240,8 @@
                 <element signature="imports" expanded="false" />
                 <element signature="e#351#352#0" expanded="false" />
                 <element signature="e#396#397#0" expanded="false" />
+                <element signature="e#617#618#0" expanded="false" />
+                <element signature="e#667#668#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -299,8 +354,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -439,7 +493,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -979,11 +1034,12 @@
       <updated>1487631691352</updated>
       <workItem from="1487631696338" duration="7554000" />
       <workItem from="1487682612655" duration="152000" />
+      <workItem from="1488767658592" duration="33000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7706000" />
+    <option name="totallyTimeSpent" value="7739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1045,6 +1101,120 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/ExamDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ExamDaoImpl#0;class#ExamDaoImpl#0" expanded="false" />
+            <element signature="method#getInstance#0;class#ExamDaoImpl#0" expanded="false" />
+            <marker date="1487667984316" expanded="true" signature="1274:1315" ph="select * fro... examResult" />
+            <marker date="1487667984316" expanded="true" signature="1274:1318" ph="select * fro... examResult" />
+            <marker date="1487667984316" expanded="true" signature="1274:1320" ph="select * fro... examResult" />
+            <marker date="1487667984316" expanded="true" signature="1274:1332" ph="select * fro... examResult" />
+            <marker date="1487667984316" expanded="true" signature="1274:1333" ph="select * fro... examResult" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entity/Exam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+          <folding>
+            <element signature="e#580#581#0" expanded="false" />
+            <element signature="e#611#612#0" expanded="false" />
+            <element signature="e#659#660#0" expanded="false" />
+            <element signature="e#699#700#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#762#763#0" expanded="false" />
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#877#878#0" expanded="false" />
+            <element signature="e#906#907#0" expanded="false" />
+            <element signature="e#947#948#0" expanded="false" />
+            <element signature="e#983#984#0" expanded="false" />
+            <element signature="e#1013#1014#0" expanded="false" />
+            <element signature="e#1042#1043#0" expanded="false" />
+            <element signature="e#1083#1084#0" expanded="false" />
+            <element signature="e#1119#1120#0" expanded="false" />
+            <element signature="e#1149#1150#0" expanded="false" />
+            <element signature="e#1178#1179#0" expanded="false" />
+            <element signature="e#1219#1220#0" expanded="false" />
+            <element signature="e#1255#1256#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/action/bussiness/ExamListBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#349#350#0" expanded="false" />
+            <element signature="e#377#378#0" expanded="false" />
+            <element signature="e#419#420#0" expanded="false" />
+            <element signature="e#453#454#0" expanded="false" />
+            <element signature="e#486#487#0" expanded="false" />
+            <element signature="e#517#518#0" expanded="false" />
+            <element signature="e#915#916#0" expanded="false" />
+            <element signature="e#964#965#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ExamResultServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#827#828#0" expanded="false" />
+            <element signature="e#850#851#0" expanded="false" />
+            <element signature="e#876#877#0" expanded="false" />
+            <element signature="e#933#934#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="35" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#UserDaoImpl#0;class#UserDaoImpl#0" expanded="false" />
+            <element signature="method#getInstance#0;class#UserDaoImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/impl/ExamImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#351#352#0" expanded="false" />
+            <element signature="e#396#397#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#667#668#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ExamService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1146,6 +1316,7 @@
         <state relative-caret-position="525">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="35" selection-end-column="54" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#UserDaoImpl#0;class#UserDaoImpl#0" expanded="false" />
             <element signature="method#getInstance#0;class#UserDaoImpl#0" expanded="false" />
           </folding>
@@ -1160,6 +1331,8 @@
             <element signature="imports" expanded="false" />
             <element signature="e#351#352#0" expanded="false" />
             <element signature="e#396#397#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#667#668#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1270,14 +1443,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/80e3893a/ca7a3220-93d9-4976-8fff-4413b8fa24e3/j2ee_student.user">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1369,6 +1542,8 @@
             <element signature="imports" expanded="false" />
             <element signature="e#351#352#0" expanded="false" />
             <element signature="e#396#397#0" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#667#668#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1414,9 +1589,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="350">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="35" selection-end-column="54" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#UserDaoImpl#0;class#UserDaoImpl#0" expanded="false" />
             <element signature="method#getInstance#0;class#UserDaoImpl#0" expanded="false" />
           </folding>
@@ -1471,8 +1647,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/impl/ExamDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="-5">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ExamDaoImpl#0;class#ExamDaoImpl#0" expanded="false" />

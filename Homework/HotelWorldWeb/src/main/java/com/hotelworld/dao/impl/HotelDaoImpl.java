@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by Tondiyee on 2017/2/3.
  */
@@ -28,5 +30,13 @@ public class HotelDaoImpl implements HotelDao {
 
     public Hotel findHotelById(String id) {
         return template.get(Hotel.class,id);
+    }
+
+    public List<Hotel> findHotelByCity(String city) {
+        return null;
+    }
+
+    public List<Hotel> findAllHotel() {
+        return null;
     }
 }

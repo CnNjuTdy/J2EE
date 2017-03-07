@@ -3,8 +3,10 @@
         <id name="id" column="o_id"/>
         <property name="hotelId" column="o_hotel_id"/>
         <property name="memberId" column="o_member_id"/>
+        <property name="money" column="o_money"/>
         <property name="roomType" column="o_room_type"/>
         <property name="roomNumber" column="o_room_number"/>
+        <property name="start" column="o_start"/>
         <property name="state" column="o_state">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">com.hotelworld.entity.state.OrderState</param>

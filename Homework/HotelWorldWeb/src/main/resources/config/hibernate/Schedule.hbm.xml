@@ -2,8 +2,7 @@
     <class name="Schedule" table="schedule">
         <id name="id" column="s_id"/>
         <property name="hotelId" column="s_hotel_id"/>
-        <property name="startDate" column="s_start"/>
-        <property name="endDate" column="s_end"/>
+        <property name="date" column="s_date"/>
         <property name="priceSingle" column="s_single"/>
         <property name="priceStandard" column="s_standard"/>
         <property name="priceDouble" column="s_double"/>

@@ -1,0 +1,9 @@
+<hibernate-mapping package="com.hotelworld.entity">
+    <class name="CheckInLog" table="check_in">
+        <id name="id" column="ci_id"/>
+        <property name="hotelId" column="ci_hotel_id"/>
+        <property name="number" column="ci_number"/>
+        <property name="date" column="ci_date"/>
+        <property name="type" column="ci_type"/>
+    </class>
+</hibernate-mapping>

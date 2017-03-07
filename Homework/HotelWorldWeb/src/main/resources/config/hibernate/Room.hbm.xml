@@ -1,0 +1,9 @@
+<hibernate-mapping package="com.hotelworld.entity">
+    <class name="Room" table="room">
+        <id name="hotelDate" column="r_hotel_date"/>
+        <property name="singleRoom" column="r_single"/>
+        <property name="standardRoom" column="r_standard"/>
+        <property name="doubleRoom" column="r_double"/>
+        <property name="suitRoom" column="r_suit"/>
+    </class>
+</hibernate-mapping>
