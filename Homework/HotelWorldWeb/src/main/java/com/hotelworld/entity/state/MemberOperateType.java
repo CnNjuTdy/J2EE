@@ -14,8 +14,10 @@ public enum MemberOperateType {
     CONSUME,
     //充值,充值时触发
     RECHARGE,
+
     //暂停,暂停时触发
     PAUSE,
+
     //停止,停止时候触发
     STOP
 }

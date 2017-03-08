@@ -12,9 +12,7 @@ import java.util.List;
  * Created by Tondiyee on 2017/2/3.
  */
 @Repository
-public class MemberLogDaoImpl implements MemberLogDao{
-    @Autowired
-    HibernateTemplate template;
+public class MemberLogDaoImpl extends BaseDaoImpl implements MemberLogDao {
     public void saveMemberLog(MemberLog memberLog) {
         template.save(memberLog);
     }
@@ -28,10 +26,11 @@ public class MemberLogDaoImpl implements MemberLogDao{
     }
 
     public MemberLog findMemberLogById(String id) {
-        return template.get(MemberLog.class,id);
+        return template.get(MemberLog.class, id);
     }
 
     public List<MemberLog> findMemberLogByMember(String memberId) {
-        return null;
+        Object[] params = {memberId};
+        return findBySQL("select * from member_log where ml_member=?", params, MemberLog.class);
     }
 }

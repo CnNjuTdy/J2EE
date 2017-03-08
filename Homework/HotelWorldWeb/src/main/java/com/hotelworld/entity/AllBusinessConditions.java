@@ -10,19 +10,21 @@ import java.util.List;
  * 主要包括：
  * 1. 每家店的营业情况
  * 2. 处在激活状态的会员数目变化情况（折线）
- * 3. Hotel机构的收入情况和支出情况（收入来自于会员支付的5%，支出来自于会员积分的兑换）
+ * 3. Hotel机构的收入情况和支出情况（收入来自于会员支付的5%，支出来自于会员积分的兑换大约1%）
  */
 public class AllBusinessConditions {
     private List<Hotel> hotels;
     private int[] memberNumbers;
+    private int money;
     private int income;
-    private int expend;
+    private int expenses;
 
-    public AllBusinessConditions(List<Hotel> hotels, int[] memberNumbers, int income, int expend) {
+    public AllBusinessConditions(List<Hotel> hotels, int[] memberNumbers, int money,int income, int expenses) {
         this.hotels = hotels;
         this.memberNumbers = memberNumbers;
+        this.money = money;
         this.income = income;
-        this.expend = expend;
+        this.expenses = expenses;
     }
 
     public List<Hotel> getHotels() {
@@ -41,6 +43,14 @@ public class AllBusinessConditions {
         this.memberNumbers = memberNumbers;
     }
 
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
     public int getIncome() {
         return income;
     }
@@ -50,10 +60,10 @@ public class AllBusinessConditions {
     }
 
     public int getExpend() {
-        return expend;
+        return expenses;
     }
 
-    public void setExpend(int expend) {
-        this.expend = expend;
+    public void setExpend(int expenses) {
+        this.expenses = expenses;
     }
 }

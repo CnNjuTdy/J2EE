@@ -16,5 +16,6 @@ public interface ApplicationDao {
 
     public Application findApplicationById(String id);
 
+    //返回的应该是所有的Application，按照时间顺序，包括已经处理的Application
     public List<Application> findAllApplication();
 }

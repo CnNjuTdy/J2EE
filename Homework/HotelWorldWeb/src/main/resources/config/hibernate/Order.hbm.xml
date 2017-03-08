@@ -1,5 +1,5 @@
 <hibernate-mapping package="com.hotelworld.entity">
-    <class name="Order" table="order">
+    <class name="Order" table="h_order">
         <id name="id" column="o_id"/>
         <property name="hotelId" column="o_hotel_id"/>
         <property name="memberId" column="o_member_id"/>

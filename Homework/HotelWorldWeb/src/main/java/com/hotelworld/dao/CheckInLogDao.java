@@ -16,5 +16,6 @@ public interface CheckInLogDao {
 
     public CheckInLog findCheckInLogById(String id);
 
+    //返回一个月的CheckInLog，如果不足一个月全部返回
     public List<CheckInLog> findCheckInLogsByHotel(String hotelId);
 }

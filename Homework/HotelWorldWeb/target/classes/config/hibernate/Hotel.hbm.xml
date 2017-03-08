@@ -8,5 +8,7 @@
         <property name="maxStandard" column="h_max_standard"/>
         <property name="maxDouble" column="h_max_double"/>
         <property name="maxSuit" column="h_max_suit"/>
+        <property name="balance" column="h_balance"/>
+        <property name="canFound" column="h_canFound"/>
     </class>
 </hibernate-mapping>

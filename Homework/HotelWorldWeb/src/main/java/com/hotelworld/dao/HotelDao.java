@@ -18,5 +18,6 @@ public interface HotelDao {
 
     public List<Hotel> findHotelByCity(String city);
 
+    //返回所有可以被搜索到的hotel，即已经被总经理批准可以营业的hotel
     public List<Hotel> findAllHotel();
 }

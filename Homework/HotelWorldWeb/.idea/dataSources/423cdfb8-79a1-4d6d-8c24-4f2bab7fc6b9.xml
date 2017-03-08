@@ -12,290 +12,292 @@
     <schema id="7" name="spring_1"/>
     <schema id="8" name="test"/>
     <schema id="9" name="hci"/>
-    <table id="10" parent="1" name="hotel"/>
-    <table id="11" parent="1" name="member"/>
-    <table id="12" parent="1" name="order"/>
+    <schema id="10" name="hotel_management"/>
+    <table id="11" parent="1" name="hotel"/>
+    <table id="12" parent="1" name="member"/>
     <table id="13" parent="1" name="schedule"/>
     <table id="14" parent="1" name="member_log"/>
     <table id="15" parent="1" name="application"/>
     <table id="16" parent="1" name="check_in"/>
     <table id="17" parent="1" name="check_out"/>
     <table id="18" parent="1" name="room"/>
-    <column id="19" parent="10" name="h_id">
+    <table id="19" parent="1" name="h_order"/>
+    <column id="20" parent="11" name="h_id">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="20" parent="10" name="h_boss">
+    <column id="21" parent="11" name="h_boss">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="21" parent="10" name="h_city">
+    <column id="22" parent="11" name="h_city">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="22" parent="10" name="h_address">
+    <column id="23" parent="11" name="h_address">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="23" parent="10" name="h_max_single">
+    <column id="24" parent="11" name="h_max_single">
       <comment>最大单人间数目</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="24" parent="10" name="h_max_standard">
+    <column id="25" parent="11" name="h_max_standard">
       <comment>最大标准间数目</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="25" parent="10" name="h_max_double">
+    <column id="26" parent="11" name="h_max_double">
       <comment>最大双人间数目</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="26" parent="10" name="h_max_suit">
+    <column id="27" parent="11" name="h_max_suit">
       <comment>最大套间数目</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="27" parent="10" name="h_balance">
+    <column id="28" parent="11" name="h_balance">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="28" parent="10" name="h_canFound">
+    <column id="29" parent="11" name="h_canFound">
       <data-type>int(11)|0</data-type>
     </column>
-    <index id="29" parent="10" name="h_boss">
+    <index id="30" parent="11" name="h_boss">
       <columns>h_boss</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="30" parent="10" name="PRIMARY">
+    <key id="31" parent="11" name="PRIMARY">
       <columns>h_id</columns>
       <primary>1</primary>
     </key>
-    <column id="31" parent="11" name="m_id">
+    <column id="32" parent="12" name="m_id">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="32" parent="11" name="m_password">
+    <column id="33" parent="12" name="m_password">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="33" parent="11" name="m_name">
+    <column id="34" parent="12" name="m_name">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="34" parent="11" name="m_phone">
+    <column id="35" parent="12" name="m_phone">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="35" parent="11" name="m_balance">
+    <column id="36" parent="12" name="m_balance">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="36" parent="11" name="m_credits">
+    <column id="37" parent="12" name="m_credits">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="37" parent="11" name="m_account">
+    <column id="38" parent="12" name="m_account">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="38" parent="11" name="m_state">
+    <column id="39" parent="12" name="m_state">
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="39" parent="11" name="PRIMARY">
+    <key id="40" parent="12" name="PRIMARY">
       <columns>m_id</columns>
       <primary>1</primary>
     </key>
-    <column id="40" parent="12" name="o_id">
+    <column id="41" parent="13" name="s_id">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="41" parent="12" name="o_hotel_id">
+    <column id="42" parent="13" name="s_hotel_id">
       <data-type>varchar(11)|0</data-type>
     </column>
-    <column id="42" parent="12" name="o_member_id">
-      <data-type>varchar(11)|0</data-type>
-    </column>
-    <column id="43" parent="12" name="o_money">
-      <data-type>int(11)|0</data-type>
-    </column>
-    <column id="44" parent="12" name="o_room_type">
-      <comment>1,2,3,4</comment>
-      <data-type>int(11)|0</data-type>
-    </column>
-    <column id="45" parent="12" name="o_room_number">
-      <data-type>int(11)|0</data-type>
-    </column>
-    <column id="46" parent="12" name="o_start">
+    <column id="43" parent="13" name="s_date">
       <data-type>date|0</data-type>
     </column>
-    <column id="47" parent="12" name="o_state">
-      <data-type>int(255)|0</data-type>
-    </column>
-    <key id="48" parent="12" name="PRIMARY">
-      <columns>o_id</columns>
-      <primary>1</primary>
-    </key>
-    <column id="49" parent="13" name="s_id">
-      <mandatory>1</mandatory>
-      <data-type>varchar(255)|0</data-type>
-    </column>
-    <column id="50" parent="13" name="s_hotel_id">
-      <data-type>varchar(11)|0</data-type>
-    </column>
-    <column id="51" parent="13" name="s_date">
-      <data-type>date|0</data-type>
-    </column>
-    <column id="52" parent="13" name="s_single">
+    <column id="44" parent="13" name="s_single">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="53" parent="13" name="s_standard">
+    <column id="45" parent="13" name="s_standard">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="54" parent="13" name="s_double">
+    <column id="46" parent="13" name="s_double">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="55" parent="13" name="s_suit">
+    <column id="47" parent="13" name="s_suit">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="56" parent="13" name="s_is_default">
+    <column id="48" parent="13" name="s_is_default">
+      <comment>默认计划是1，否则是0</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <index id="57" parent="13" name="s_hotel_id">
+    <index id="49" parent="13" name="s_hotel_id">
       <columns>s_hotel_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="58" parent="13" name="PRIMARY">
+    <key id="50" parent="13" name="PRIMARY">
       <columns>s_id</columns>
       <primary>1</primary>
     </key>
-    <column id="59" parent="14" name="ml_id">
+    <column id="51" parent="14" name="ml_id">
       <comment>这个表的主要作用是记录会员卡操作的各项记录。&#xd;
 &#xd;
 </comment>
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="60" parent="14" name="ml_member">
+    <column id="52" parent="14" name="ml_member">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="61" parent="14" name="ml_operate_type">
+    <column id="53" parent="14" name="ml_operate_type">
       <comment>操作类型包括：充值，暂停，停止，消费，注册</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="62" parent="14" name="ml_money">
+    <column id="54" parent="14" name="ml_money">
       <comment>这个字段表示操作涉及到的金额数目（正），不涉及金额时为0</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="63" parent="14" name="ml_date">
+    <column id="55" parent="14" name="ml_date">
       <data-type>date|0</data-type>
     </column>
-    <column id="64" parent="14" name="ml_reason">
+    <column id="56" parent="14" name="ml_reason">
       <comment>1：人为&#xd;
 0：自动</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <index id="65" parent="14" name="ml_member">
+    <index id="57" parent="14" name="ml_member">
       <columns>ml_member</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="66" parent="14" name="PRIMARY">
+    <key id="58" parent="14" name="PRIMARY">
       <columns>ml_id</columns>
       <primary>1</primary>
     </key>
-    <column id="67" parent="15" name="a_id">
+    <column id="59" parent="15" name="a_id">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="68" parent="15" name="a_hotel_id">
+    <column id="60" parent="15" name="a_hotel_id">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="69" parent="15" name="a_info">
+    <column id="61" parent="15" name="a_info">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="70" parent="15" name="a_mail_address">
+    <column id="62" parent="15" name="a_mail_address">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="71" parent="15" name="a_state">
+    <column id="63" parent="15" name="a_state">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="72" parent="15" name="a_h_boss">
+    <column id="64" parent="15" name="a_h_boss">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="73" parent="15" name="a_h_city">
+    <column id="65" parent="15" name="a_h_city">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="74" parent="15" name="a_h_address">
+    <column id="66" parent="15" name="a_h_address">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="75" parent="15" name="a_h_max_single">
+    <column id="67" parent="15" name="a_h_max_single">
       <comment>最大单人间数目</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="76" parent="15" name="a_h_max_standard">
+    <column id="68" parent="15" name="a_h_max_standard">
       <comment>最大标准间数目</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="77" parent="15" name="a_h_max_double">
+    <column id="69" parent="15" name="a_h_max_double">
       <comment>最大双人间数目</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="78" parent="15" name="a_h_max_suit">
+    <column id="70" parent="15" name="a_h_max_suit">
       <comment>最大套间数目</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="79" parent="15" name="PRIMARY">
+    <key id="71" parent="15" name="PRIMARY">
       <columns>a_id</columns>
       <primary>1</primary>
     </key>
-    <column id="80" parent="16" name="ci_id">
+    <column id="72" parent="16" name="ci_id">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="81" parent="16" name="ci_hotel_id">
+    <column id="73" parent="16" name="ci_hotel_id">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="82" parent="16" name="ci_number">
+    <column id="74" parent="16" name="ci_number">
       <comment>身份证号码</comment>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="83" parent="16" name="ci_date">
+    <column id="75" parent="16" name="ci_date">
       <data-type>date|0</data-type>
     </column>
-    <column id="84" parent="16" name="ci_type">
+    <column id="76" parent="16" name="ci_type">
       <comment>0是网上支付，1是现金支付</comment>
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="85" parent="16" name="PRIMARY">
+    <key id="77" parent="16" name="PRIMARY">
       <columns>ci_id</columns>
       <primary>1</primary>
     </key>
-    <column id="86" parent="17" name="co_id">
+    <column id="78" parent="17" name="co_id">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="87" parent="17" name="co_hotel_id">
+    <column id="79" parent="17" name="co_hotel_id">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="88" parent="17" name="co_number">
+    <column id="80" parent="17" name="co_number">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="89" parent="17" name="co_date">
+    <column id="81" parent="17" name="co_date">
       <data-type>date|0</data-type>
     </column>
-    <column id="90" parent="17" name="co_type">
+    <column id="82" parent="17" name="co_type">
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="91" parent="17" name="PRIMARY">
+    <key id="83" parent="17" name="PRIMARY">
       <columns>co_id</columns>
       <primary>1</primary>
     </key>
-    <column id="92" parent="18" name="r_hotel_date">
+    <column id="84" parent="18" name="r_hotel_date">
       <comment>hotelId+六位日期组成，避免复合主键，查找的时候要注意！</comment>
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="93" parent="18" name="r_single">
+    <column id="85" parent="18" name="r_single">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="94" parent="18" name="r_standard">
+    <column id="86" parent="18" name="r_standard">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="95" parent="18" name="r_double">
+    <column id="87" parent="18" name="r_double">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="96" parent="18" name="r_suit">
+    <column id="88" parent="18" name="r_suit">
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="97" parent="18" name="PRIMARY">
+    <key id="89" parent="18" name="PRIMARY">
       <columns>r_hotel_date</columns>
+      <primary>1</primary>
+    </key>
+    <column id="90" parent="19" name="o_id">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="91" parent="19" name="o_hotel_id">
+      <data-type>varchar(11)|0</data-type>
+    </column>
+    <column id="92" parent="19" name="o_member_id">
+      <data-type>varchar(11)|0</data-type>
+    </column>
+    <column id="93" parent="19" name="o_money">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="94" parent="19" name="o_room_type">
+      <comment>1,2,3,4</comment>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="95" parent="19" name="o_room_number">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="96" parent="19" name="o_start">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="97" parent="19" name="o_state">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="98" parent="19" name="PRIMARY">
+      <columns>o_id</columns>
       <primary>1</primary>
     </key>
   </database-model>

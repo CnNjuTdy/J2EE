@@ -16,12 +16,16 @@ package com.hotelworld.entity.state;
 public enum OrderState {
     //预备阶段，此时可以取消
     READINESS,
+
     //成功入住
     CHECK_IN,
+
     //取消
     CANCEL,
+
     //完结
     OVER,
+
     //超时
     OVERTIME
 }

@@ -25,7 +25,10 @@ public class DateUtilTest {
     public void testNextNDay(){
         System.out.println(DateUtil.nextNDay(new Date(),1));
     }
-
+    @Test
+    public void testNextNMonth(){
+        System.out.println(DateUtil.nextNMonth(DateUtil.getToday(),-1));
+    }
 
 
 }

@@ -5,7 +5,8 @@ package com.hotelworld.util;
  */
 public class IdUtil {
     public static String getMemberId(){
-        return null;
+        int num = (int)(Math.random()*9999999)+1;
+        return String.format("%07d", num);
     }
     public static String getMemberLogId(){
         return null;

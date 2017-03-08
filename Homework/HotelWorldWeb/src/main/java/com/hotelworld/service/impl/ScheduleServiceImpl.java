@@ -5,6 +5,7 @@ import com.hotelworld.entity.Schedule;
 import com.hotelworld.entity.state.WebResultState;
 import com.hotelworld.service.ScheduleService;
 import com.hotelworld.util.DateUtil;
+import com.hotelworld.util.IdUtil;
 import com.hotelworld.util.WebMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,10 +35,10 @@ public class ScheduleServiceImpl implements ScheduleService{
 
     public WebMessage addSchedule(Date date,int[] prices,String hotelId){
         Schedule scheduleDB = scheduleDao.findScheduleByDateAndHotel(hotelId,date);
-        if(scheduleDB!=null){
+        if(scheduleDB.getIsDefault()==0){
             return new WebMessage("您选择的日期："+ DateUtil.getStandardDate(date)+"已存在价目表，请尝试修改当天的计划！", WebResultState.WARNING);
         }else {
-            Schedule schedule = new Schedule(hotelId+DateUtil.getSix(date),hotelId,date,prices[0],prices[1],prices[2],prices[3],0);
+            Schedule schedule = new Schedule(IdUtil.getScheduleId(),hotelId,date,prices[0],prices[1],prices[2],prices[3],0);
             scheduleDao.saveSchedule(schedule);
         }
         return new WebMessage("创建"+DateUtil.getStandardDate(date)+"的价目表成功",WebResultState.NORMAL);
@@ -45,10 +46,6 @@ public class ScheduleServiceImpl implements ScheduleService{
 
     public WebMessage editSchedule(Schedule schedule) {
         String message = "";
-        if(scheduleDao.findScheduleByDateAndHotel(schedule.getHotelId(),schedule.getDate())==null){
-            message = "您选择的日期还没有价目表，请尝试添加";
-            return new WebMessage(message,WebResultState.WARNING);
-        }
         if (schedule.getIsDefault() == 1) {
             message = "修改默认价目表成功！";
         }else {

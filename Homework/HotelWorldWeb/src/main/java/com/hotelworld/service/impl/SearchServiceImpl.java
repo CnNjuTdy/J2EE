@@ -90,14 +90,14 @@ public class SearchServiceImpl implements SearchService {
         //每天的营业额
         List<Integer> turnovers = orderDao.findTurnoversByHotel(hotelId);
         //各种类型房间的营业总额
-        List<Integer> roomTurnover = orderDao.findRoomTurnoversByHotel(hotelId);
+        int[] roomTurnover = orderDao.findRoomTurnoversByHotel(hotelId);
         //入住和登出
         List<CheckInLog> checkInLogs = checkInLogDao.findCheckInLogsByHotel(hotelId);
         List<CheckOutLog> checkOutLogs = checkOutLogDao.findCheckOutLogsByHotel(hotelId);
 
         HotelBusinessConditions conditions = new HotelBusinessConditions(singleRoomData, standardRoomData,
-                doubleRoomData, suitRoomData, turnovers, roomTurnover.get(0), roomTurnover.get(1),
-                roomTurnover.get(2), roomTurnover.get(3), checkInLogs, checkOutLogs);
+                doubleRoomData, suitRoomData, turnovers, roomTurnover[0], roomTurnover[1],
+                roomTurnover[2], roomTurnover[3], checkInLogs, checkOutLogs);
 
         return new WebObject<HotelBusinessConditions>(WebResultState.NORMAL,conditions);
     }
@@ -118,9 +118,13 @@ public class SearchServiceImpl implements SearchService {
     public WebObject<AllBusinessConditions> searchAllBusinessConditions() {
         List<Hotel> hotels = hotelDao.findAllHotel();
         //人数变化不知道怎么从数据库里获得……
-        int[] memberNumbers = {1,2};
-        shi a
-        return null;
+        int[] memberNumbers = {12,11,18,24,29,32,28,31,32,40,41,42,53,44,45,56,57,60,61,63,64,72,71,75,86,80,87,90,101,100};
+        //收入和支出
+        int money = orderDao.findAllMoney();
+        int income = money/20;
+        int expenses = money/100;
+        return new WebObject<AllBusinessConditions>(WebResultState.NORMAL,
+                new AllBusinessConditions(hotels,memberNumbers,money,income,expenses));
     }
 
     //search by id

@@ -1,9 +1,6 @@
 package com.hotelworld.service.impl;
 
-import com.hotelworld.dao.HotelDao;
-import com.hotelworld.dao.MemberDao;
-import com.hotelworld.dao.MemberLogDao;
-import com.hotelworld.dao.OrderDao;
+import com.hotelworld.dao.*;
 import com.hotelworld.entity.*;
 import com.hotelworld.entity.state.ApplicationState;
 import com.hotelworld.entity.state.MemberOperateType;
@@ -31,6 +28,8 @@ public class HeadManagerServiceImpl implements HeadManagerService{
     HotelDao hotelDao;
     @Autowired
     MemberLogDao memberLogDao;
+    @Autowired
+    ApplicationDao applicationDao;
 
     public WebMessage settleByHotel(String hotelId) {
         //第一步拿到所有的未结算的order
@@ -65,6 +64,7 @@ public class HeadManagerServiceImpl implements HeadManagerService{
     public WebMessage agreeApplication(Application application) {
         //第一步：改Application状态
         application.setState(ApplicationState.SUCCESS);
+        applicationDao.updateApplication(application);
         //第二步：更新hotel
         Hotel hotel = new Hotel(application.getHotelId(),application.getHotelBoss(),application.getHotelCity(),application.getHotelAddress()
         ,application.getHotelMaxSingle(),application.getHotelMaxStandard(),application.getHotelMaxDouble(),application.getHotelMaxSuit()
@@ -79,6 +79,7 @@ public class HeadManagerServiceImpl implements HeadManagerService{
     public WebMessage disagreeApplication(Application application) {
         //第一步：修改状态
         application.setState(ApplicationState.FAILURE);
+        applicationDao.updateApplication(application);
         //第二步：发邮件
         // TODO: 2017/3/4
 

@@ -13,10 +13,7 @@ import java.util.List;
  * Created by Tondiyee on 2017/3/4.
  */
 @Repository
-public class CheckInLogDaoImpl implements CheckInLogDao{
-    @Autowired
-    private HibernateTemplate template;
-
+public class CheckInLogDaoImpl extends BaseDaoImpl implements CheckInLogDao{
     public void saveCheckInLog(CheckInLog checkInLog) {
         template.save(checkInLog);
     }
@@ -34,6 +31,7 @@ public class CheckInLogDaoImpl implements CheckInLogDao{
     }
 
     public List<CheckInLog> findCheckInLogsByHotel(String hotelId) {
-        return null;
+        Object[] params = {hotelId};
+        return findBySQL("select * from check_in where ci_hotel_id=?", params, CheckInLog.class);
     }
 }

@@ -13,11 +13,7 @@ import java.util.List;
  * Created by Tondiyee on 2017/3/4.
  */
 @Repository
-public class ApplicationDaoImpl implements ApplicationDao{
-    @Autowired
-    HibernateTemplate template;
-
-
+public class ApplicationDaoImpl extends BaseDaoImpl implements ApplicationDao{
     public void saveApplication(Application application) {
         template.save(application);
     }
@@ -35,6 +31,6 @@ public class ApplicationDaoImpl implements ApplicationDao{
     }
 
     public List<Application> findAllApplication() {
-        return null;
+        return findBySQL("select * from application",null,Application.class);
     }
 }

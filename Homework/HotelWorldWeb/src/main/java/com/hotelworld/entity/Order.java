@@ -28,7 +28,8 @@ public class Order {
     private Date start;
     private OrderState state;
 
-    public Order(String id, String hotelId, String memberId, int money, int roomType, int roomNumber, Date start,OrderState state) {
+
+    public Order(String id, String hotelId, String memberId, int money, int roomType, int roomNumber, Date start, OrderState state) {
         this.id = id;
         this.hotelId = hotelId;
         this.memberId = memberId;
@@ -39,8 +40,7 @@ public class Order {
         this.state = state;
     }
 
-    public Order() {
-    }
+    public Order(){}
 
     public String getId() {
         return id;
@@ -98,7 +98,6 @@ public class Order {
         this.start = start;
     }
 
-
     public OrderState getState() {
         return state;
     }
@@ -107,15 +106,16 @@ public class Order {
         this.state = state;
     }
 
-
     @Override
     public String toString() {
         return "Order{" +
                 "id='" + id + '\'' +
                 ", hotelId='" + hotelId + '\'' +
                 ", memberId='" + memberId + '\'' +
+                ", money=" + money +
                 ", roomType=" + roomType +
                 ", roomNumber=" + roomNumber +
+                ", start=" + start +
                 ", state=" + state +
                 '}';
     }

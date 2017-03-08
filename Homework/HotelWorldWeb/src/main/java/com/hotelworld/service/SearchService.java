@@ -35,7 +35,7 @@ public interface SearchService {
     public WebObject<List<Order>> searchOrderByMember(String memberId);
 
     /**
-     * 使用者：会员或者总经理
+     * 使用者：会员
      * 使用时机：查看会员举动记录
      * 根据会员id返回所有的会员记录
      *

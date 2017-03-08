@@ -17,7 +17,7 @@ public interface RoomDao {
     public void updateRoom(Room room);
 
     public Room findRoomById(String hotelDate);
-
+    //一个月内的room
     public List<Room> findRecentRoomsByHotel(String hotelId);
 
 }

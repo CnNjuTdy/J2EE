@@ -39,6 +39,21 @@ public class DateUtil {
         c.add(Calendar.DATE,n);
         return c.getTime();
     }
+
+    public static Date nextNMonth(Date date,int n){
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        c.add(Calendar.MONTH,n);
+        return c.getTime();
+    }
+
+    public static Date lastMonth(Date date){
+        return nextNMonth(date,-1);
+    }
+    public static Date lastMonth(){
+        return nextNMonth(new Date(),-1);
+    }
+
     public static boolean equalDate(Date date1,Date date2){
         String s1 = df1.format(date1);
         String s2 = df1.format(date2);

@@ -2,6 +2,7 @@ package com.hotelworld.dao.impl;
 
 import com.hotelworld.dao.RoomDao;
 import com.hotelworld.entity.Room;
+import com.hotelworld.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -14,10 +15,7 @@ import java.util.List;
  * Created by Tondiyee on 2017/3/3.
  */
 @Repository
-public class RoomDaoImpl implements RoomDao {
-    @Autowired
-    HibernateTemplate template;
-
+public class RoomDaoImpl extends BaseDaoImpl implements RoomDao {
     public void saveRoom(Room room) {
         template.save(room);
     }
@@ -35,6 +33,9 @@ public class RoomDaoImpl implements RoomDao {
     }
 
     public List<Room> findRecentRoomsByHotel(String hotelId) {
-        return null;
+        String idStart = hotelId+DateUtil.getSix(DateUtil.lastMonth());
+        String idEnd = hotelId+ DateUtil.getSix(DateUtil.getToday());
+        Object[] params={idStart,idEnd};
+        return findBySQL("select * from room where r_hotel_date>=? and r_hotel_date<?",params,Room.class);
     }
 }

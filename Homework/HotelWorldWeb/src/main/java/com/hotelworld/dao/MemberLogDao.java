@@ -15,6 +15,6 @@ public interface MemberLogDao {
     public void updateMemberLog(MemberLog memberLog);
 
     public MemberLog findMemberLogById(String id);
-
+    //返回用户的所有log
     public List<MemberLog> findMemberLogByMember(String memberId);
 }
