@@ -29,7 +29,7 @@ public class MemberServiceImpl implements MemberService {
         Member member = new Member(IdUtil.getMemberId(), name, password, phone, 0, 0, account,
                 MemberState.CLOSED);
         dao1.saveMember(member);
-        MemberLog log = new MemberLog(IdUtil.getMemberLogId(), member.getId(), MemberOperateType.REGISTER,
+        MemberLog log = new MemberLog(IdUtil.getMemberLogId(member.getId()), member.getId(), MemberOperateType.REGISTER,
                 0, DateUtil.getToday(), 1);
         dao2.saveMemberLog(log);
         return new WebMessage("注册成功！您还没有开通会员", WebResultState.NORMAL);
@@ -42,7 +42,7 @@ public class MemberServiceImpl implements MemberService {
         } else {
             member.setState(MemberState.INACTIVE);
             dao1.updateMember(member);
-            MemberLog log = new MemberLog(IdUtil.getMemberLogId(), member.getId(), MemberOperateType.JOIN,
+            MemberLog log = new MemberLog(IdUtil.getMemberLogId(member.getId()), member.getId(), MemberOperateType.JOIN,
                     0, DateUtil.getToday(), 1);
             return new WebMessage("成功开通会员。会员状态：未激活", WebResultState.NORMAL);
         }
@@ -55,7 +55,7 @@ public class MemberServiceImpl implements MemberService {
         } else {
             member.setState(MemberState.CLOSED);
             dao1.updateMember(member);
-            MemberLog log = new MemberLog(IdUtil.getMemberLogId(), member.getId(), MemberOperateType.STOP,
+            MemberLog log = new MemberLog(IdUtil.getMemberLogId(member.getId()), member.getId(), MemberOperateType.STOP,
                     0, DateUtil.getToday(), 1);
             dao2.saveMemberLog(log);
             return new WebMessage("成功停止会员。", WebResultState.NORMAL);
@@ -82,17 +82,17 @@ public class MemberServiceImpl implements MemberService {
                 if (balance < 1000) {
                     //会员状态不用改变
                     message = "成功充值" + money + "元，余额：" + balance + "元。仍未激活！";
-                    MemberLog log = new MemberLog(IdUtil.getMemberLogId(), member.getId(), MemberOperateType.RECHARGE,
+                    MemberLog log = new MemberLog(IdUtil.getMemberLogId(member.getId()), member.getId(), MemberOperateType.RECHARGE,
                             money, DateUtil.getToday(), 1);
                     dao2.saveMemberLog(log);
                 } else if (balance >= 1000) {
                     //未激活->激活
                     message = "成功充值" + money + "元，余额：" + balance + "元。已激活";
                     member.setState(MemberState.ACTIVE);
-                    MemberLog log1 = new MemberLog(IdUtil.getMemberLogId(), member.getId(), MemberOperateType.RECHARGE,
+                    MemberLog log1 = new MemberLog(IdUtil.getMemberLogId(member.getId()), member.getId(), MemberOperateType.RECHARGE,
                             money, DateUtil.getToday(), 1);
                     dao2.saveMemberLog(log1);
-                    MemberLog log2 = new MemberLog(IdUtil.getMemberLogId(), member.getId(), MemberOperateType.ACTIVATE,
+                    MemberLog log2 = new MemberLog(IdUtil.getMemberLogId(member.getId()), member.getId(), MemberOperateType.ACTIVATE,
                             0, DateUtil.getToday(), 1);
                     dao2.saveMemberLog(log2);
                 }

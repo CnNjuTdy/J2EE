@@ -38,7 +38,7 @@ public class ScheduleServiceImpl implements ScheduleService{
         if(scheduleDB.getIsDefault()==0){
             return new WebMessage("您选择的日期："+ DateUtil.getStandardDate(date)+"已存在价目表，请尝试修改当天的计划！", WebResultState.WARNING);
         }else {
-            Schedule schedule = new Schedule(IdUtil.getScheduleId(),hotelId,date,prices[0],prices[1],prices[2],prices[3],0);
+            Schedule schedule = new Schedule(IdUtil.getScheduleId(hotelId),hotelId,date,prices[0],prices[1],prices[2],prices[3],0);
             scheduleDao.saveSchedule(schedule);
         }
         return new WebMessage("创建"+DateUtil.getStandardDate(date)+"的价目表成功",WebResultState.NORMAL);

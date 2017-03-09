@@ -13,7 +13,7 @@ import java.util.List;
  * Created by Tondiyee on 2017/3/4.
  */
 @Repository
-public class CheckInLogDaoImpl extends BaseDaoImpl implements CheckInLogDao{
+public class CheckInLogDaoImpl extends BaseDaoImpl implements CheckInLogDao {
     public void saveCheckInLog(CheckInLog checkInLog) {
         template.save(checkInLog);
     }
@@ -27,7 +27,7 @@ public class CheckInLogDaoImpl extends BaseDaoImpl implements CheckInLogDao{
     }
 
     public CheckInLog findCheckInLogById(String id) {
-        return template.get(CheckInLog.class,id);
+        return template.get(CheckInLog.class, id);
     }
 
     public List<CheckInLog> findCheckInLogsByHotel(String hotelId) {

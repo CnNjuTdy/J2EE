@@ -61,7 +61,7 @@ public class OrderServiceImpl implements OrderService {
             }
         }
         //第四步，生成订单并保存
-        Order order = new Order(IdUtil.getOrderId(), hotelId, memberId, money, roomType, roomNumber, start, state);
+        Order order = new Order(IdUtil.getOrderId(hotelId), hotelId, memberId, money, roomType, roomNumber, start, state);
         orderDao.saveOrder(order);
         //第五步，减少房间数目并且保存
         room.minRoom(roomType);

@@ -53,7 +53,7 @@ public class HeadManagerServiceImpl implements HeadManagerService{
             hotel.addBalance((int)(order.getMoney()*0.95));
             hotelDao.updateHotel(hotel);
             //memberLog
-            MemberLog log = new MemberLog(IdUtil.getMemberLogId(),member.getId(), MemberOperateType.CONSUME,
+            MemberLog log = new MemberLog(IdUtil.getMemberLogId(member.getId()),member.getId(), MemberOperateType.CONSUME,
                     order.getMoney(),DateUtil.getToday(),1);
             memberLogDao.saveMemberLog(log);
 

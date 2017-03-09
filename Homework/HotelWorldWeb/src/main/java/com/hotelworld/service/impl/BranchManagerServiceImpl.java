@@ -41,7 +41,7 @@ public class BranchManagerServiceImpl implements BranchManagerService {
     }
 
     public WebMessage submitApplication(Hotel hotel, String info, String mailAddress) {
-        String applicationId = IdUtil.getApplicationId();
+        String applicationId = IdUtil.getApplicationId(hotel.getId());
         ApplicationState state = ApplicationState.UNCHECK;
         Application application = new Application(applicationId, hotel.getId(), info, mailAddress, state, hotel.getBoss(), hotel.getCity(),
                 hotel.getAddress(), hotel.getMaxRoom(1), hotel.getMaxRoom(2), hotel.getMaxRoom(3), hotel.getMaxRoom(4),hotel.getBalance());
@@ -52,7 +52,7 @@ public class BranchManagerServiceImpl implements BranchManagerService {
 
     public WebMessage checkIn(Order order, String name, String number) {
         //第一步：生成checkInId
-        String checkInLogId = IdUtil.getCheckInLogId();
+        String checkInLogId = IdUtil.getCheckInLogId(order.getHotelId());
         //第二步：判断是预定的还是直接进的
         int type = -1;
         String memberId = order.getMemberId();
@@ -73,7 +73,7 @@ public class BranchManagerServiceImpl implements BranchManagerService {
     }
 
     public WebMessage checkOut(Order order, String name, String number) {
-        String checkOutLogId = IdUtil.getCheckOutLogId();
+        String checkOutLogId = IdUtil.getCheckOutLogId(order.getHotelId());
 
         int type = -1;
         String memberId = order.getMemberId();
